@@ -3,4 +3,5 @@
          edge: "right"
      });
      $('.collapsible').collapsible();
+     $('.tooltipped').tooltip();
  });
