@@ -11,13 +11,13 @@
                 <i class="fas fa-folder-open prefix light-blue-text text-darken-4"></i>
                 <select id="category_name" name="category_name" class="validate" required>
                     <option value="" disabled>Choose Category</option>
-                    {% for category in categories %}
-                    {% if category.category_name == task.category_name %}
+            {% for category in categories %}
+                {% if category.category_name == task.category_name %}
                     <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
-                    {% else %}
+                {% else %}
                     <option value="{{ category.category_name }}">{{ category.category_name }}</option>
-                    {% endif %}
-                    {% endfor %}
+                {% endif %}
+            {% endfor %}
                 </select>
                 <label for="category_name">Task Category</label>
             </div>
@@ -57,11 +57,11 @@
                 <div class="switch">
                     <i class="fas fa-exclamation-circle prefix light-blue-text text-darken-4"></i>
                     <label for="is_urgent">
-                        {% if is_urgent == 'on' %}
+                    {% if is_urgent == 'on' %}
                         <input type="checkbox" id="is_urgent" name="is_urgent" checked>
-                        {% else %}
+                    {% else %}
                         <input type="checkbox" id="is_urgent" name="is_urgent">
-                        {% endif %}
+                    {% endif %}
                         <span class="lever"></span>
                         Is Urgent
                     </label>
